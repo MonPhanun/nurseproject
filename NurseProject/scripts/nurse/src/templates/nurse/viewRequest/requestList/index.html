@@ -1,0 +1,115 @@
+﻿
+<div >
+    <div class="mt-3">
+
+        <div class="type row me-1 ms-1">
+            <div class="col-12 col-xl-6 col-md-6 col-sm-12 pe-xl-1 pe-md-2 pe-sm-1 p-0">
+                <label for="" class="fs-6 d-flex text-color">Start Date</label>
+                <input class="form-control name fs-5 pt-xl-3 pb-xl-3" type="date" [(ngModel)]="startDate">
+            </div>
+            <div class="col-12 col-xl-6 col-md-6 col-sm-12 ps-xl-1 ps-md-2 ps-sm-1 p-0">
+                <label for="" class="fs-6 d-flex text-color">End Date</label>
+                <input class="form-control name fs-5 pt-xl-3 pb-xl-3" type="date" [(ngModel)]="endDate">
+            </div>
+        </div>
+
+        <!--<div *ngIf="imageUrl.length==0" class="type row mt-4 me-1 ms-1">
+        <div class="col-12 p-0">
+            <label [ngClass]="errMsImage !='' ? 'err-input':''" for="image123" class="form-control fs-6 d-flex text-color d-flex align-items-center  pt-xl-4 pb-xl-4">
+                <i class="bi bi-upload pe-4 fs-3"></i>
+                Image Upload
+            </label>
+            <input hidden [ngClass]="errMsImage !='' ? 'err-input':''" multiple id="image123" class="form-control name fs-5 pt-xl-3 pb-xl-3" type="file" (change)="onFileSelected($event)">
+            <div [ngClass]="errMsImage !='' ? 'error':'no-error'" class="fs-6 label-image">{{errMsImage == '' ? "no message": errMsImage}}</div>
+
+        </div>
+    </div>
+
+    <div *ngIf="imageUrl.length!=0" class="type row mt-4 me-1 ms-1">
+        <div class="d-flex align-items-center justify-content-end">
+            <label for="image123" class="fs-6 d-flex text-color d-flex align-items-center ">
+                <i class="bi bi-upload pe-4 fs-3"></i>
+                Image Upload
+            </label>
+            <input hidden [ngClass]="errMsImage !='' ? 'err-input':''" multiple id="image123" class="form-control name fs-5 pt-xl-3 pb-xl-3" type="file" (change)="onFileSelected($event)">
+        </div>
+        <div class="col-12 p-0 d-flex form-control pt-xl-4 pb-xl-4">
+            <div *ngFor="let url of imageUrl;let i = index" class="position-relative img-content ms-1">
+                <img class="imgs" width="200" height="200" [src]="url" style="object-fit:cover" />
+                <div class="position-absolute del-img">
+                    <button class="btn-delimg" (click)="removeImg(i)"><i class="bi bi-x-lg p-1"></i></button>
+                </div>
+            </div>-->
+        <!--*ngFor="let url of imageUrl"  [src]="url"-->
+        <!--</div>
+      </div>-->
+
+        <div class="type ps-2 ms-1 position-relative">
+
+            <div class="type fs-6 w-100 d-flex justify-content-end">
+                <button class="btn btnAdd text-white m-2 saves" (click)="searchByDate()">Search</button>
+            </div>
+        </div>
+
+        <div class="pt-5">
+
+            <div class="pt-4 pb-4 mt-2">
+                <table class="table text-center fs-6 display-big-screen">
+                    <thead class="">
+                        <tr class="">
+                            <th scope="col" class="table-herder">No</th>
+                            <th scope="col" class="table-herder">Quote</th>
+                            <th scope="col" class="table-herder">Request Name</th>
+                            <th scope="col" class="table-herder">Service Date</th>
+                            <th scope="col" class="table-herder">Status</th>
+                            <th scope="col" class="table-herder">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <!--*ngFor="let value of ProductData;let i=index"-->
+                        <tr *ngFor="let value of mockData | dateRangeFilter: start : end;let i=index">
+                            <th class="mouv-cursor text-colors fw-bold menu-hover" scope="row">{{i+1}}</th>
+                            <td>{{value.quote}}</td>
+                            <td>{{value.name}}</td>
+                            <td>{{value.date}}</td>
+                            <td>{{value.status}}</td>
+                            <td><i class="bi bi-eye mouv-cursor text-colors menu-hover "  routerLink="/home/response" ></i></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Not use -->
+<div *ngIf="isShow" class="position-absolute top-0 alert-table">
+    <div class="pt-4 pb-4 mt-2">
+        <table class="table text-center fs-6 display-big-screen">
+            <thead class="">
+                <tr class="">
+                    <th scope="col" class="table-herder">Quote</th>
+                    <th scope="col" class="table-herder">Status</th>
+                    <th scope="col" class="table-herder">Views</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--*ngFor="let value of ProductData;let i=index"-->
+                <tr>
+                    <td>Quote 1</td>
+                    <td>Accep</td>
+                    <td><i class="bi bi-eye mouv-cursor text-colors menu-hover"></i></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="position-absolute mouv-cursor menu-hover top-0 end-0 fs-5" (click)="closeQuote()">
+        <i class="bi bi-x-lg p-1"></i>
+    </div>
+</div>

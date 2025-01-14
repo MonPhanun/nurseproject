@@ -1,0 +1,47 @@
+﻿<div>
+    <div class="d-flex">
+        <!-- Sidebar block -->
+        <!--<div [ngClass]="colapesSidebar ? 'sidebar-colape':'sidebar'" class="tranh overflow-hidden">
+            <sidebar-component></sidebar-component>
+        </div>-->
+        <!-- Comtent block -->
+        <div class="header-content overflow-hidden">
+            <!-- Header block -->
+            <div class="d-none-print ">
+                <header-component></header-component>
+            </div>
+
+            <!-- Comtent block -->
+            <div class="h-100 w-100 p-2 pe-3 ps-3 zindex overflow-scroll">
+
+                <!-- Tracking -->
+                <section class="step-wizard d-none-print">
+                    <ul class="step-wizard-list">
+                        <li class="step-wizard-item">
+                            <span class="progress-count">1</span>
+                            <span class="progress-label">Select Provider</span>
+                        </li>
+                        <li class="step-wizard-item ">
+                            <span class="progress-count">2</span>
+                            <span class="progress-label">Create Dressing</span>
+                        </li>
+                        <li class="step-wizard-item current-item">
+                            <span class="progress-count">3</span>
+                            <span class="progress-label">View Request</span>
+                        </li>
+                        <li class="step-wizard-item">
+                            <span class="progress-count">4</span>
+                            <span class="progress-label">Accept or Reject</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <router-outlet></router-outlet>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

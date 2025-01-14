@@ -1,0 +1,39 @@
+﻿
+<div>
+    <div class="mt-3">
+
+        <div class="type row  me-1 ms-1">
+            <div class="col-12 col-xl-12 col-md-12 col-sm-12  p-0">
+                <label for="" class="fs-6 d-flex text-color">Supplier</label>
+                <select [ngClass]="errMsSupplier !='' ? 'err-input':''" class="form-select  select-agenda fs-5 pt-xl-3 pb-xl-3" id="floatingSelect" [(ngModel)]="values.supplier">
+                    <option [selected]="true">select</option>
+                    <option *ngFor="let val of mockProvider" [value]=val.supplier>{{val.supplier}}</option>
+                </select>
+                <div [ngClass]="errMsSupplier !='' ? 'error':'no-error'" class="fs-6 label-suplier">{{errMsSupplier=='' ? "no message": errMsSupplier}}</div>
+
+            </div>
+        </div>
+
+        <div class="type row  me-1 ms-1">
+            <div class="col-12 col-xl-12 col-md-12 col-sm-12  p-0">
+                <label for="" class="fs-6 d-flex text-color">Location</label>
+                <select [ngClass]="errMsLocation !='' ? 'err-input':''" class="form-select  select-agenda fs-5 pt-xl-3 pb-xl-3" id="floatingSelect" [(ngModel)]="values.location">
+                    <option [selected]="true">select</option>
+                    <option *ngFor="let val of mockProvider" [value]=val.location>{{val.location}}</option>
+                </select>
+                <div [ngClass]="errMsLocation !='' ? 'error':'no-error'" class="fs-6 label-location">{{errMsLocation=='' ? "no message": errMsLocation}}</div>
+
+            </div>
+        </div>
+
+        <div class="type ps-2 ms-1 position-relative">
+
+            <div class="type fs-6 w-100 d-flex justify-content-end">
+                <button class="btn btnCancel text-white m-2 cancel" (click)="Cancel()">Cancel</button>
+                <button class="btn btnAdd text-white m-2 save" (click)="Save()">Save</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
