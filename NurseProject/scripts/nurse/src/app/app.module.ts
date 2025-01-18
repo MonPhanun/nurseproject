@@ -3,7 +3,7 @@ import { AdminUiRoute } from "../route/route";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, provideHttpClient } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from "./app.component";
 import { layoutComponent } from "../components/layout/layout.component";
@@ -19,6 +19,7 @@ import { ViewResponseComponent } from "../components/viewResponse/viewResponse/v
 import { FilterPipe } from "../pipes/filter.pipe";
 import { DateRangeFilterPipe } from "../pipes/dateRangeFilter.pipe";
 import { NgxPaginationModule } from 'ngx-pagination';
+import { sidebarComponent } from "../components/sidebar/sidebar.component";
 
 
 
@@ -36,6 +37,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
         ViewResponseComponent,
         AppComponent,
         DateRangeFilterPipe,
+        sidebarComponent,
         FilterPipe
     ],
     imports: [
@@ -48,7 +50,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
         NgxPaginationModule,
         BrowserAnimationsModule
     ],
-    providers: [],
+    providers: [provideHttpClient()],
     bootstrap: [AppComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

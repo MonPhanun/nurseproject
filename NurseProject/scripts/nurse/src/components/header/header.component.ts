@@ -3,6 +3,7 @@
 export @Component({
     selector: 'header-component',
     templateUrl: '../../templates/nurse/header/index.html',
+    styleUrl:'../../templates/nurse/header/styles.less'
 })
 class headerComponent {
 
@@ -12,8 +13,9 @@ class headerComponent {
     isColapes = false
 
     onColapes() {
-        this.colapes.emit(true);
-        this.isColapes = true
+        this.colapes.emit(this.isColapes);
+        this.isColapes = !this.isColapes
+
     }
 
     onUnColapes() {

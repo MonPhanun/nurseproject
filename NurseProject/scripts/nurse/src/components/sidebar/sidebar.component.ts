@@ -3,6 +3,7 @@
 @Component({
     selector: 'sidebar-component',
     templateUrl: '../../templates/nurse/sidebar/index.html',
+    styleUrl: '../../templates/nurse/sidebar/styles.less',
 })
 export class sidebarComponent {
 
