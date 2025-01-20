@@ -1,6 +1,6 @@
 ﻿import { Component, EventEmitter, Input, OnInit, Output, inject } from "@angular/core";
 import { ValidationService } from "../../../services/validation.service";
-import { Item, dressingVM, Image } from "./dressingVM";
+import { Item, RegisterVM, Image } from "./registerVM";
 import { Router } from "@angular/router";
 import { DressingProviderService } from "../../../services/dressingProvider.service";
 
@@ -8,10 +8,10 @@ import { DressingProviderService } from "../../../services/dressingProvider.serv
 
 @Component({
     selector: "colorform-component",
-    templateUrl: '../../../templates/nurse/dressingProvider/formDressing/index.html'
+    templateUrl: '../../../templates/nurse/RegisterPatient/formRegister/index.html'
 })
 
-export class FormDressingComponent implements OnInit {
+export class FormRegisterComponent implements OnInit {
 
     private validator: ValidationService = inject(ValidationService);
     private router: Router = inject(Router);
@@ -25,8 +25,8 @@ export class FormDressingComponent implements OnInit {
         this.mockItem = this.dressingService.getItem();
     }
 
-    oldValue: dressingVM = new dressingVM()
-    values: dressingVM = new dressingVM()
+    oldValue: RegisterVM = new RegisterVM()
+    values: RegisterVM = new RegisterVM()
 
     oldItem: Item = new Item()
     Item: Item = new Item();
@@ -41,7 +41,10 @@ export class FormDressingComponent implements OnInit {
     search:string=''
 
     @Output("onSave")
-    onSave: EventEmitter<dressingVM> = new EventEmitter<dressingVM>()
+    onSave: EventEmitter<RegisterVM> = new EventEmitter<RegisterVM>()
+
+    @Output("onCancel")
+    onCancel: EventEmitter<boolean> = new EventEmitter<boolean>()
 
     Save() {
         if (this.Validator() && this.values.isValid()) {
@@ -60,6 +63,10 @@ export class FormDressingComponent implements OnInit {
         }
         this.clear();
         this.isEditItem = false
+    }
+
+    onClose() {
+        this.onCancel.emit(false);
     }
     
     getValEdit(value: Item) {

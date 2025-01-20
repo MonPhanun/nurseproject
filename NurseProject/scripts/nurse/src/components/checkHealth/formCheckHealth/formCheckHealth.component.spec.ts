@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { providerComponent } from './formProvider.component';
+import { providerComponent } from './formCheckHealth.component';
 
 describe('ChoiceProviderComponent', () => {
     let component: providerComponent;

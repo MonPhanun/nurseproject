@@ -1,10 +1,9 @@
 ﻿import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { layoutComponent } from '../components/layout/layout.component';
-import { ProviderComponent } from '../components/choiceProvider/provider/provider.component';
-import { DressingComponent } from '../components/dressignProvider/dressing/dressing.component';
 import { viewListComponent } from '../components/viewRequest/viewList/viewList.component';
 import { ResponseComponent } from '../components/viewResponse/response/response.component';
+import { RegisterComponent } from '../components/registerPatient/register/register.component';
 
 
 const adminRoute: Routes = [
@@ -12,22 +11,22 @@ const adminRoute: Routes = [
         path: 'home',
         component: layoutComponent,
         children: [
+            //{
+            //    path: 'provider',
+            //    component: ProviderComponent
+            //},
             {
-                path: 'provider',
-                component: ProviderComponent
+                path: 'register',
+                component: RegisterComponent
             },
-            {
-                path: 'dressing',
-                component: DressingComponent
-            },
-            {
-                path: 'request',
-                component: viewListComponent
-            },
-            {
-                path: 'response',
-                component: ResponseComponent
-            }
+            //{
+            //    path: 'request',
+            //    component: viewListComponent
+            //},
+            //{
+            //    path: 'response',
+            //    component: ResponseComponent
+            //}
         ]
     },
     {

@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { DressingComponent } from './dressing.component';
+import { DressingComponent } from './register.component';
 
 describe('SetupColorComponent', () => {
     let component: DressingComponent;

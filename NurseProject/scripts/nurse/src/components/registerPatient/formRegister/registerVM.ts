@@ -1,5 +1,5 @@
 ﻿
-export class dressingVM {
+export class RegisterVM {
 
     DFS: Date = null;
     item: Array<Item> = [];
@@ -9,7 +9,7 @@ export class dressingVM {
             this.item.length != 0;
     }
 
-    copy(value: dressingVM) {
+    copy(value: RegisterVM) {
         this.DFS = value.DFS;
         this.item = value.item;
     }

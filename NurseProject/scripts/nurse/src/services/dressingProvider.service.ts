@@ -1,11 +1,11 @@
 ﻿import { Injectable } from "@angular/core";
-import { dressingVM, Image } from "../components/dressignProvider/formDressing/dressingVM";
+import { RegisterVM, Image } from "../components/registerPatient/formRegister/registerVM";
 
 @Injectable({ providedIn: 'root' })
 export class DressingProviderService {
 
     storeItem: Array<Image> = []
-    storeDressing: Array<dressingVM> = []
+    storeDressing: Array<RegisterVM> = []
 
     mockItem() {
         var mock = new Array<Image>();
@@ -22,19 +22,19 @@ export class DressingProviderService {
         return this.storeItem;
     }
 
-    createDressing(data: dressingVM) {
+    createDressing(data: RegisterVM) {
         if (data.isValid()) {
             this.storeDressing.push(data)
         }
     }
 
-    editDressing(data: dressingVM[]) {
+    editDressing(data: RegisterVM[]) {
         if (data.length > 0) {
             this.storeDressing = this.storeDressing.map(e => e == data[0] ? data[1] : e);
         }
     }
 
-    deleteDressing(data: dressingVM) {
+    deleteDressing(data: RegisterVM) {
         if (data.isValid()) {
             this.storeDressing = this.storeDressing.filter(e => e !=data)
         }

@@ -1,6 +1,6 @@
 ﻿import { Component, EventEmitter, Input, OnInit, Output, inject } from "@angular/core";
 import { ValidationService } from "../../../services/validation.service";
-import { providerVM } from "./formProviderVM";
+import { providerVM } from "./checkHealthVM";
 import { Router } from "@angular/router";
 import { ChoiceProviderService } from "../../../services/choiceProvider.service";
 

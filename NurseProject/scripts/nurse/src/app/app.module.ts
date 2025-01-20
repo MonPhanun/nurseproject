@@ -8,18 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from "./app.component";
 import { layoutComponent } from "../components/layout/layout.component";
 import { headerComponent } from "../components/header/header.component";
-import { providerComponent } from "../components/choiceProvider/formProvider/formProvider.component";
-import { ProviderComponent } from "../components/choiceProvider/provider/provider.component";
-import { FormDressingComponent } from "../components/dressignProvider/formDressing/formDressing.component";
-import { DressingComponent } from "../components/dressignProvider/dressing/dressing.component";
-import { requestListComponent } from "../components/viewRequest/viewRequest/requestList.component";
-import { viewListComponent } from "../components/viewRequest/viewList/viewList.component";
-import { ResponseComponent } from "../components/viewResponse/response/response.component";
-import { ViewResponseComponent } from "../components/viewResponse/viewResponse/viewResponse.component";
 import { FilterPipe } from "../pipes/filter.pipe";
 import { DateRangeFilterPipe } from "../pipes/dateRangeFilter.pipe";
 import { NgxPaginationModule } from 'ngx-pagination';
 import { sidebarComponent } from "../components/sidebar/sidebar.component";
+import { RegisterComponent } from "../components/registerPatient/register/register.component";
+import { FormRegisterComponent } from "../components/registerPatient/formRegister/formRegister.component";
 
 
 
@@ -27,18 +21,12 @@ import { sidebarComponent } from "../components/sidebar/sidebar.component";
     declarations: [
         layoutComponent,
         headerComponent,
-        providerComponent,
-        ProviderComponent,
-        FormDressingComponent,
-        DressingComponent,
-        requestListComponent,
-        viewListComponent,
-        ResponseComponent,
-        ViewResponseComponent,
         AppComponent,
         DateRangeFilterPipe,
         sidebarComponent,
-        FilterPipe
+        FilterPipe,
+        RegisterComponent,
+        FormRegisterComponent
     ],
     imports: [
         BrowserModule,

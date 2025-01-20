@@ -3,7 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ProviderComponent } from './provider.component';
+import { ProviderComponent } from './checkHealth.component';
 
 describe('ProviderComponent', () => {
     let component: ProviderComponent;

@@ -4,8 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { FormDressingComponent } from './formDressing.component';
-import { Item } from './dressingVM';
+import { FormDressingComponent } from './formRegister.component';
+import { Item } from './registerVM';
 
 describe('FormSizeComponent', () => {
     let component: FormDressingComponent;

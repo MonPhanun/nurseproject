@@ -1,25 +1,4 @@
-﻿<!--<div>
-    <div class="d-flex">-->
-<!-- Sidebar block -->
-<!--<div [ngClass]="colapesSidebar ? 'sidebar-colape':'sidebar'" class="tranh overflow-hidden">
-    <sidebar-component></sidebar-component>
-</div>-->
-<!-- Comtent block -->
-<!--<div class="header-content overflow-hidden">-->
-<!-- Header block -->
-<!--<div class="d-none-print ">
-    <header-component></header-component>
-</div>-->
-<!-- Comtent block -->
-<!--<div class="h-100 w-100 p-2 pe-3 ps-3 zindex overflow-scroll">
-
-
-                <router-outlet></router-outlet>
-            </div>
-
-        </div>
-    </div>
-</div>-->
+﻿
 
 <header-component (colapes)="colapes($event)"></header-component>
 
@@ -31,7 +10,7 @@
         <sidebar-component></sidebar-component>
     </div>
 
-    <div class="contain pe-xl-5 ps-xl-5 pe-lg-5 ps-lg-5">
+    <div class="contain pe-xl-5 ps-xl-5 pe-lg-2 ps-lg-2">
    
         <router-outlet></router-outlet>
     </div>
