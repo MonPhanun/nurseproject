@@ -8,8 +8,18 @@
 export class sidebarComponent {
 
     subItem = false;
+    sideBar = 0;
 
     ShowITem() {
         this.subItem = !this.subItem;
+    }
+
+    sidebarClick(num: number) {
+        if (this.sideBar != num) {
+            this.sideBar = num;
+        } else {
+            this.sideBar = 0;
+;        }
+        console.log(num)
     }
 }

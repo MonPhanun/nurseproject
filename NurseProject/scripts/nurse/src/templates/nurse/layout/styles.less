@@ -6,19 +6,58 @@
 
 .sidebar-content {
     width: 300px !important;
+    transition: all 0.2s ease-in-out !important;
 
-    transition:all 0.3s ease-in-out !important;
+    z-index:10;
 }
 
 .sidebar-content-close {
     width: 0px !important;
-    transition: all 0.3s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
 }
 
 .contain {
     width: 100% !important;
+    height: 92.5vh !important;
+    overflow: scroll !important;
+    background-color: rgb(240, 246, 245, 0.92);
 }
 
 .sidebar-main {
-    transition: all 0.3s ease-in-out !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+    
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+    .sidebar-content {
+        width: 225px !important;
+        position: fixed;
+        left: 0px;
+    }
+    .sidebar-content-close {
+        position: fixed;
+        left: -500px;
+    }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+    
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+    
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    
 }

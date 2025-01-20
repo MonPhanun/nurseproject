@@ -29,6 +29,11 @@ const adminRoute: Routes = [
                 component: ResponseComponent
             }
         ]
+    },
+    {
+        redirectTo: "home",
+        path: "",
+        pathMatch: "full"
     }
 ]
 

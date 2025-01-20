@@ -1,11 +1,44 @@
 @import "../layout/style.css";
 
 .adminuiux-sidebar {
-    height: 92vh !important;
-    background-color: red !important;
-    background-color: hsla(0, 0%, 100%, 0.85);
+    height: 92.5vh !important;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .adminuiux-sidebar-inner {
-    height: 92vh !important;
+    height: 92.5vh !important;
    
+}
+
+.bi-chevron-down{
+    transform:rotate(-90deg);
+    font-size:14px !important;
+    transition:all .2s ease-in-out;
+}
+
+.bi-chevron-down-click {
+    transform: rotate(0deg) !important;
+    transition: all .2s ease-in-out;
+}
+
+.bi-dot {
+    color: #0bb8b6 !important;
+    display:block !important;
+    font-size:20px !important;
+}
+
+.sub-menu-item{
+    font-size:15px !important;
+}
+
+.sub-menu {
+    background-color: rgb(240, 246, 245, 0.92);
+    height: 0px;
+    overflow: hidden;
+    transition: all .2s ease-in-out !important;
+}
+
+.sub-menu-open {
+    height: 68px !important;
+    transition: all .2s ease-in-out !important;
 }
