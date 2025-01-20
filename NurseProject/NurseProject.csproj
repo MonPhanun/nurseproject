@@ -6,4 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="scripts\nurse\src\components\checkHealth\selectPatient\selectPatient.component.spec.ts" />
+    <None Remove="scripts\nurse\src\components\checkHealth\selectPatient\selectPatient.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="scripts\nurse\src\components\checkHealth\selectPatient\selectPatient.component.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\nurse\src\components\checkHealth\selectPatient\selectPatient.component.spec.ts" />
+  </ItemGroup>
+
 </Project>

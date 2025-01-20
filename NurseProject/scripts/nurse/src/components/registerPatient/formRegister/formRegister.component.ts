@@ -8,7 +8,8 @@ import { DressingProviderService } from "../../../services/dressingProvider.serv
 
 @Component({
     selector: "colorform-component",
-    templateUrl: '../../../templates/nurse/RegisterPatient/formRegister/index.html'
+    templateUrl: '../../../templates/nurse/RegisterPatient/formRegister/index.html',
+    styleUrl: '../../../templates/nurse/RegisterPatient/formRegister/styles.less'
 })
 
 export class FormRegisterComponent implements OnInit {

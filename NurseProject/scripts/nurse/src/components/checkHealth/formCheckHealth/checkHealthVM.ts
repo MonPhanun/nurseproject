@@ -1,5 +1,5 @@
 ﻿
-export class providerVM {
+export class CheckHealthVM {
     supplier: string = "";
     location: string = "";
 
@@ -8,7 +8,7 @@ export class providerVM {
             this.location != "";
     }
 
-    copy(value: providerVM) {
+    copy(value: CheckHealthVM) {
         this.supplier = value.supplier;
         this.location = value.location;
     }

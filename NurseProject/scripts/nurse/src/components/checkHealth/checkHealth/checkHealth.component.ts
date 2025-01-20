@@ -1,35 +1,41 @@
 ﻿import { Component, OnInit, inject } from "@angular/core";
 import { Router } from "@angular/router";
-
-import { providerVM } from "../formProvider/formProviderVM";
-import { ChoiceProviderService } from "../../../services/choiceProvider.service";
+import { CheckHealthVM } from "../formCheckHealth/checkHealthVM";
 
 export @Component({
-    selector: 'provider-component',
-    templateUrl: '../../../templates/nurse/choiceProvider/provider/index.html',
+    selector: 'checkhealth-component',
+    templateUrl: '../../../templates/nurse/checkHealth/checkHealth/index.html',
+    styleUrl: '../../../templates/nurse/checkHealth/checkHealth/styles.less'
 })
-class ProviderComponent implements OnInit {
-    private route: Router = inject(Router);
-    private provider: ChoiceProviderService = inject(ChoiceProviderService);
-
+class CheckHealthComponent implements OnInit {
+    private router: Router = inject(Router);
+    isFilter = false;
+    isAdd = false;
     constructor() { }
 
     ngOnInit(): void {
-        this.getEmbell()
     }
 
-    providerData: Array<providerVM> = new Array<providerVM>()
-
-    getEmbell() {
-        //this.NameData = this.embellService.getEmbellName();
-    }
+    checkHealth: Array<CheckHealthVM> = new Array<CheckHealthVM>()
 
 
-    onSave(data: providerVM) {
+    onSave(data: CheckHealthVM) {
         if (data.isValid()) {
-            this.providerData.push(data)
-            this.provider.createProvider(data);
+            this.checkHealth.push(data)
+            this.router.navigate(['/home/request'])
         }
+    }
+
+    onFilter() {
+        this.isFilter = !this.isFilter;
+    }
+
+    onAdd() {
+        this.isAdd = true;
+    }
+
+    onCancel(cancel: boolean) {
+        this.isAdd = cancel
 
     }
 }

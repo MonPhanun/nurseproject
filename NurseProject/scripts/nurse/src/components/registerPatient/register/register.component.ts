@@ -13,7 +13,7 @@ class RegisterComponent implements OnInit {
     private router: Router = inject(Router);
     private dressingService: DressingProviderService = inject(DressingProviderService);
     isFilter = false;
-    isAdd = true;
+    isAdd = false;
     constructor() { }
 
     ngOnInit(): void {

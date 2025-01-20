@@ -14,6 +14,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { sidebarComponent } from "../components/sidebar/sidebar.component";
 import { RegisterComponent } from "../components/registerPatient/register/register.component";
 import { FormRegisterComponent } from "../components/registerPatient/formRegister/formRegister.component";
+import { CheckHealthComponent } from "../components/checkHealth/checkHealth/checkHealth.component";
+import { FormCheckHealthComponent } from "../components/checkHealth/formCheckHealth/formCheckHealth.component";
 
 
 
@@ -26,7 +28,9 @@ import { FormRegisterComponent } from "../components/registerPatient/formRegiste
         sidebarComponent,
         FilterPipe,
         RegisterComponent,
-        FormRegisterComponent
+        FormRegisterComponent,
+        CheckHealthComponent,
+        FormCheckHealthComponent
     ],
     imports: [
         BrowserModule,
