@@ -6,7 +6,7 @@
                 Check Health Form
             </div>
         </div>
-        <div class="type row me-1 ms-1 pe-4 ps-4 pb-3">
+        <div class="type row me-1 ms-1  pb-3">
 
             <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
                 <label for="" class="fs-6 d-flex text-colors">Weight*</label>
@@ -45,9 +45,9 @@
                 <input class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="time" placeholder="time">
                 <!--<div [ngClass]="errMsColor !='' ? 'error':'no-error'" class="fs-6 label-color">{{errMsColor=='' ? "no message": errMsColor}}</div>-->
             </div>
-            <div class="col-12col-sm-6 p-0 pe-1">
+            <div class="col-12 col-xl-12 col-md-12 col-sm-6 p-0">
                 <label for="" class="fs-6 d-flex text-colors">Other*</label>
-                <textarea [ngClass]="errMsDFS !='' ? 'err-input':''" cols="4" placeholder="id" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number"> </textarea>
+                <textarea [ngClass]="errMsDFS !='' ? 'err-input':''" rows="4" placeholder="id" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number"> </textarea>
                 <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
             </div>
 

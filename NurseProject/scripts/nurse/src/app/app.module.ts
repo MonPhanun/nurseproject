@@ -16,6 +16,9 @@ import { RegisterComponent } from "../components/registerPatient/register/regist
 import { FormRegisterComponent } from "../components/registerPatient/formRegister/formRegister.component";
 import { CheckHealthComponent } from "../components/checkHealth/checkHealth/checkHealth.component";
 import { FormCheckHealthComponent } from "../components/checkHealth/formCheckHealth/formCheckHealth.component";
+import { SelectPatientComponent } from "../components/checkHealth/selectPatient/selectPatient.component";
+import { BloodResultComponent } from "../components/bloodResult/bloodResult/bloodResult.component";
+import { resultDetailComponent } from "../components/bloodResult/resultDetail/resultDetail.component";
 
 
 
@@ -30,7 +33,10 @@ import { FormCheckHealthComponent } from "../components/checkHealth/formCheckHea
         RegisterComponent,
         FormRegisterComponent,
         CheckHealthComponent,
-        FormCheckHealthComponent
+        FormCheckHealthComponent,
+        SelectPatientComponent,
+        BloodResultComponent,
+        resultDetailComponent
     ],
     imports: [
         BrowserModule,

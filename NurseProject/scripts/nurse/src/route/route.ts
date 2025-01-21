@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { layoutComponent } from '../components/layout/layout.component';
 import { RegisterComponent } from '../components/registerPatient/register/register.component';
 import { CheckHealthComponent } from '../components/checkHealth/checkHealth/checkHealth.component';
+import { BloodResultComponent } from '../components/bloodResult/bloodResult/bloodResult.component';
 
 
 const adminRoute: Routes = [
@@ -19,10 +20,10 @@ const adminRoute: Routes = [
                 path: 'checkhealth',
                 component: CheckHealthComponent
             },
-            //{
-            //    path: 'response',
-            //    component: ResponseComponent
-            //}
+            {
+                path: 'blood',
+                component: BloodResultComponent
+            }
         ]
     },
     {
