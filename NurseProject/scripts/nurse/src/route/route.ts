@@ -4,6 +4,8 @@ import { layoutComponent } from '../components/layout/layout.component';
 import { RegisterComponent } from '../components/registerPatient/register/register.component';
 import { CheckHealthComponent } from '../components/checkHealth/checkHealth/checkHealth.component';
 import { BloodResultComponent } from '../components/bloodResult/bloodResult/bloodResult.component';
+import { BuildingComponent } from '../components/patientRoom/building/building.component';
+import { BuildingTyleComponent } from '../components/patientRoom/buildingType/buildingType.component';
 
 
 const adminRoute: Routes = [
@@ -23,7 +25,15 @@ const adminRoute: Routes = [
             {
                 path: 'blood',
                 component: BloodResultComponent
-            }
+            },
+            {
+                path: 'building',
+                component: BuildingComponent
+            }, 
+            {
+                path: 'buildingType',
+                component: BuildingTyleComponent
+            }, 
         ]
     },
     {

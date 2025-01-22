@@ -4,19 +4,19 @@
         <div class="col-xl-12 col-lg-12 col-md-12 col-12">
             <div class="header-name d-flex justify-content-start d-flex align-items-center pe-2 ps-2">
                 <div class=" form-check text-colors fs-5 p-0 me-auto">
-                    Blood Resulft
+                    Check Health
                 </div>
 
                 <!--<button class="btn btnCancel text-white m-2 cancel" (click)="Cancel()">Cancel</button>-->
-                <button class="btn btnAdd text-white mb-2  save" [ngClass]="isFilter ? 'btnCancel':''" (click)="onFilter()">
+                <button class="btn btnAdd text-white mb-2 me-2  save" [ngClass]="isFilter ? 'btnCancel':''" (click)="onFilter()">
                     <i *ngIf="!isFilter" class="bi bi-funnel"></i>
                     <i *ngIf="isFilter" class="bi bi-x-lg"></i>
                     Filter
                 </button>
-                <!--<button class="btn btnAdd text-white mb-2  save" (click)="onAdd()">
+                <button class="btn btnAdd text-white mb-2  save" (click)="onAdd()">
                     <i class="bi bi-plus-circle-dotted"></i>
                     Add
-                </button>-->
+                </button>
 
             </div>
 
@@ -44,8 +44,9 @@
                             <tr class="bg-info">
                                 <th scope="col" class="header-table">No</th>
                                 <th scope="col" class="header-table">First Name</th>
-                                <th scope="col" class="header-table">Last Name</th>                    
-                                <th scope="col" class="header-table">Dr.Name</th>
+                                <th scope="col" class="header-table">Last Name</th>
+                                <th scope="col" class="header-table">Gender</th>
+                                <th scope="col" class="header-table">Nurse Id</th>
                                 <th scope="col" class="header-table">Date</th>
                                 <th scope="col" class="header-table">Action</th>
                             </tr>
@@ -71,15 +72,15 @@
 
         </div>
     </div>
-    <!--<div [ngClass]="isAdd ? 'add-form':'add-form-close'"
+    <div [ngClass]="isAdd ? 'add-form':'add-form-close'"
          class="position-absolute row d-flex justify-content-center align-items-center ps-md-4">
         <div class="add-contain col-xl-12 col-lg-12 col-md-10 col-sm-9 col-8 p-0">
             <selectpatient-component (onCancel)="onCancel($event)"></selectpatient-component>
         </div>
 
-    </div>-->
+    </div>
 </div>
-<div *ngIf="false" class="w-100 h-100 pt-4 pb-5">
-    <result-component></result-component>
-</div>
+<div *ngIf="false" class="w-100 h-100 pt-5 pb-5 d-flex justify-content-center align-items-start position-relative">
+    <healthform-component (onSave)="onSave($event)" (onCancel)="onCancel($event)"></healthform-component>
 
+</div>

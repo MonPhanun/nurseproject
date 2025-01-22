@@ -1,0 +1,66 @@
+﻿
+<div>
+    <div class="">
+        <div class="col-12 p-0 mb-5">
+            <div class="p-4 fs-5 header-form m-0">
+                Check Health Form
+            </div>
+        </div>
+        <div class="type row me-1 ms-1  pb-3">
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">Weight*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="weight" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 ps-1">
+                <label for="" class="fs-6 d-flex text-colors">Hight*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="hight" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">Blood*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="blood" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 ps-1">
+                <label for="" class="fs-6 d-flex text-colors">Heat*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="heat" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">Date*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="date" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="date">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 ps-1 p-0">
+                <label for="" class="d-flex text-colors">Time*</label>
+                <input class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="time" placeholder="time">
+                <!--<div [ngClass]="errMsColor !='' ? 'error':'no-error'" class="fs-6 label-color">{{errMsColor=='' ? "no message": errMsColor}}</div>-->
+            </div>
+            <div class="col-12 col-xl-12 col-md-12 col-sm-6 p-0">
+                <label for="" class="fs-6 d-flex text-colors">Other*</label>
+                <textarea [ngClass]="errMsDFS !='' ? 'err-input':''" rows="4" placeholder="id" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number"> </textarea>
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 ps-xl-1 ps-md-2 ps-sm-1 p-0 d-flex align-items-center justify-content-end">
+                <div class="d-flex justify-content-end align-items-end">
+                    <button class="btn btnCancel text-white m-2 p-2 additem" (click)="onClose()">Cancel</button>
+                    <button *ngIf="!isEditItem" class="btn btnAdd text-white m-2 p-2 additem">Save</button>
+                    <button *ngIf="isEditItem" class="btn btnAdd text-white m-2 p-2 additem">Save Change</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

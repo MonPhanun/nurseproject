@@ -1,0 +1,107 @@
+﻿
+<div class="w-100 h-100 pt-5 pb-5 d-flex justify-content-center align-items-start position-relative">
+    <div class="w-100 row  d-flex flex-column justify-content-center align-items-center fs-2">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+            <div class="header-name d-flex justify-content-start d-flex align-items-center pe-2 ps-2">
+                <div class=" form-check text-colors fs-5 p-0 me-auto">
+                    Patient Room
+                </div>
+            </div>
+
+            <div class="pt-2 pe-1 ps-1 ">
+                <div class="pe-3 ps-3 row mt-2">
+                    <div *ngFor="let val of room" class="col-6 col-xl-3 col-md-4 pe-xl-2 pe-md-2 pe-sm-2 p-0 mt-2">
+                        <div class="build-card p-3" (click)="onBuildingType()">
+                            <div class="fs-5 text-colors">
+                                {{val}}
+                            </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <div class="buil-number text-colors num-bg pe-2 ps-2 rounded-1">
+                                    <span class="pe-1">P</span>
+                                    <span>123</span>
+                                </div>
+                                <div class="buil-number text-colors num-bg pe-2 ps-2 rounded-1">
+                                    <span class="pe-1">R</span>
+                                    <span>123</span>
+                                </div>
+                                <div class="buil-number text-colors num-bg pe-2 ps-2 rounded-1">
+                                    <span class="pe-1">F</span>
+                                    <span>123</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="pe-3 ps-3 row mt-5">
+                    <div class="col-6 col-xl-6 col-md-6 col-sm-6 pe-xl-1 pe-md-2 pe-sm-1 p-0">
+
+                        <input class="form-control name fs-6 pt-xl-2 pb-xl-2" placeholder="search . . ." type="text">
+                    </div>
+                    <div class="col-6 col-xl-6 col-md-6 col-sm-6 p-0 d-flex justify-content-end">
+                        <button class="btn btnAdd text-white me-2  save" [ngClass]="isFilter ? 'btnCancel':''" (click)="onFilter()">
+                            <i *ngIf="!isFilter" class="bi bi-funnel"></i>
+                            <i *ngIf="isFilter" class="bi bi-x-lg"></i>
+                            Filter
+                        </button>
+                        <button class="btn btnAdd text-white save" (click)="onAdd()">
+                            <i class="bi bi-plus-circle-dotted"></i>
+                            Add
+                        </button>
+
+                    </div>
+                </div>
+                <div class="pe-3 ps-3 row mt-2 " [ngClass]="isFilter ? 'filter-open':'filter'">
+                    <div class="col-6 col-xl-6 col-md-6 pe-xl-1 pe-md-2 pe-sm-1 p-0">
+                        <label for="" class="fs-6 d-flex text-color">Start Date</label>
+                        <input class="form-control name fs-6 pt-xl-2 pb-xl-2" type="date">
+                    </div>
+                    <div class="col-6 col-xl-6 col-md-6 ps-xl-1 ps-md-2 ps-sm-1 p-0">
+                        <label for="" class="fs-6 d-flex text-color">End Date</label>
+                        <input class="form-control name fs-6 pt-xl-2 pb-xl-2" type="date">
+                    </div>
+                </div>
+                <div class="pt-2 pb-4 pe-1 ps-1">
+                    <table class="table text-center fs-6 display-big-screen ">
+                        <thead class="header-table">
+                            <tr class="bg-info">
+                                <th scope="col" class="header-table">No</th>
+                                <th scope="col" class="header-table">Full Name</th>
+                                <th scope="col" class="header-table">Room</th>
+                                <th scope="col" class="header-table">Type</th>
+                                <th scope="col" class="header-table">Bed</th>
+                                <th scope="col" class="header-table">Building</th>
+                                <th scope="col" class="header-table">CheckIn</th>
+                                <th scope="col" class="header-table">Status</th>
+                                <th scope="col" class="header-table">Action</th>
+                            </tr>
+                        </thead>
+                        <!--<tbody>
+
+                <tr *ngFor="let value of values.item | filter:search;let i=index">
+
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{value.item}}</td>
+                    <td>{{value.size}}</td>
+                    <td>{{value.color}}</td>
+                    <td>{{value.quantity}}</td>
+                    <td><i class="bi bi-pencil-square text-info me-2 cusors" (click)="getValEdit(value)"></i><i class="bi bi-trash text-danger cusors" (click)="deleteItem(value)"></i></td>
+                </tr>
+
+            </tbody>-->
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--<div [ngClass]="isAdd ? 'add-form':'add-form-close'"
+         class="position-absolute row add-form d-flex justify-content-center align-items-center ps-md-4" >
+        <div class="add-contain col-xl-11 col-lg-11 col-md-10 col-sm-9 col-8 p-0">
+            <colorform-component (onSave)="onSave($event)" (onCancel)="onCancel($event)"></colorform-component>
+        </div>
+        
+    </div>-->
+</div>

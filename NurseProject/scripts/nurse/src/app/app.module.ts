@@ -19,6 +19,9 @@ import { FormCheckHealthComponent } from "../components/checkHealth/formCheckHea
 import { SelectPatientComponent } from "../components/checkHealth/selectPatient/selectPatient.component";
 import { BloodResultComponent } from "../components/bloodResult/bloodResult/bloodResult.component";
 import { resultDetailComponent } from "../components/bloodResult/resultDetail/resultDetail.component";
+import { BuildingComponent } from "../components/patientRoom/building/building.component";
+import { BuildingTyleComponent } from "../components/patientRoom/buildingType/buildingType.component";
+import { RoomRegisterComponent } from "../components/patientRoom/roomRegister/roomRegister.component";
 
 
 
@@ -36,7 +39,10 @@ import { resultDetailComponent } from "../components/bloodResult/resultDetail/re
         FormCheckHealthComponent,
         SelectPatientComponent,
         BloodResultComponent,
-        resultDetailComponent
+        resultDetailComponent,
+        BuildingComponent,
+        BuildingTyleComponent,
+        RoomRegisterComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,78 @@
+﻿
+<div>
+    <div class="">
+        <div class="col-12 p-0 mb-5">
+            <div class="p-4 fs-5 header-form m-0">
+                Patient Registeration Form
+            </div>
+        </div>
+        <div class="type row me-1 ms-1 pe-4 ps-4 pb-3">
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">First Name*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="first name" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="text">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 ps-1">
+                <label for="" class="fs-6 d-flex text-colors">Last Name*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="last name" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="text">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="d-flex text-colors">Gender</label>
+                <select [ngClass]="errMsItem !='' ? 'err-input':''" class="form-control form-select  select-agenda fs-6 pt-xl-2 pb-xl-2" [(ngModel)]="Item.item" id="floatingSelect">
+
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <div [ngClass]="errMsItem !='' ? 'error':'no-error'" class="fs-6 label-item">{{errMsItem=='' ? "no message": errMsItem}}</div>
+
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 ps-1">
+                <label for="" class="fs-6 d-flex text-colors">Age*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="age" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="text">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">Identity Id*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="id" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 ps-1 p-0">
+                <label for="" class="d-flex text-color">Phone*</label>
+                <input class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="number" [(ngModel)]="Item.quantity" placeholder="phone number">
+                <!--<div [ngClass]="errMsColor !='' ? 'error':'no-error'" class="fs-6 label-color">{{errMsColor=='' ? "no message": errMsColor}}</div>-->
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 p-0 pe-1">
+                <label for="" class="fs-6 d-flex text-colors">CheckIn Date*</label>
+                <input [ngClass]="errMsDFS !='' ? 'err-input':''" placeholder="id" class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="date">
+                <div [ngClass]="errMsDFS !='' ? 'error':'no-error'" class="fs-6 label-date">{{errMsDFS=='' ? "no message": errMsDFS}}</div>
+            </div>
+
+            <div class="col-12 col-xl-6 col-md-6 col-sm-6 ps-1 p-0">
+                <label for="" class="d-flex text-color">CheckIn Time*</label>
+                <input class="form-control text-colors fs-6 pt-xl-2 pb-xl-2" type="time" [(ngModel)]="Item.quantity" placeholder="phone number">
+                <!--<div [ngClass]="errMsColor !='' ? 'error':'no-error'" class="fs-6 label-color">{{errMsColor=='' ? "no message": errMsColor}}</div>-->
+            </div>
+
+            <div class="col-12 ps-xl-1 ps-md-2 ps-sm-1 p-0 d-flex align-items-center justify-content-end">
+                <div class="d-flex justify-content-end align-items-end">
+                    <button class="btn btnCancel text-white m-2 p-2 additem" (click)="onClose()">Cancel</button>
+                    <button *ngIf="!isEditItem" class="btn btnAdd text-white m-2 p-2 additem" (click)="addItem()">Save</button>
+                    <button *ngIf="isEditItem" class="btn btnAdd text-white m-2 p-2 additem" (click)="editItem()">Save Change</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

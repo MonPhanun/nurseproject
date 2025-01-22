@@ -24,6 +24,7 @@
                     <span class="menu-name">Dashboard</span>
                 </a>
             </li>
+            <!--======-->
             <li class="nav-item d-flex align-items-center" (click)="sidebarClick(1)">
                 <a class="nav-link me-auto">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -48,18 +49,18 @@
 
             </li>
             <li class="nav-item sub-menu p-0" [ngClass]="sideBar==1? 'sub-menu-open':''">
-                <a class="nav-link ps-4 pb-1 pt-1"   routerLink="register"
-                 routerLinkActive="active-link">
+                <a class="nav-link ps-4 pb-1 pt-1" routerLink="register"
+                   routerLinkActive="active-link">
                     <i class="bi bi-dot me-2"></i>
                     <span class="menu-name sub-menu-item">Registeration</span>
                 </a>
-                <a class="nav-link ps-4 pb-1 pt-1"  routerLink="checkhealth"
-                 routerLinkActive="active-link">
+                <a class="nav-link ps-4 pb-1 pt-1" routerLink="checkhealth"
+                   routerLinkActive="active-link">
                     <i class="bi bi-dot me-2"></i>
                     <span class="menu-name sub-menu-item">Check Health</span>
                 </a>
             </li>
-
+            <!--======-->
             <li class="nav-item">
                 <a class="nav-link"
                    routerLink="blood"
@@ -68,60 +69,48 @@
                     <span class="menu-name">Blood Result</span>
                 </a>
             </li>
+            <!--======-->
+            <li class="nav-item">
+                <a class="nav-link"
+                   routerLink="building"
+                   routerLinkActive="active-link">
+                    <i class="bi bi-building icon-block me-2"></i>
+                    <span class="menu-name">Patient Room</span>
+                </a>
+            </li>
 
+            <!--======-->
+            <li class="nav-item">
+                <a class="nav-link">
+                    <i class="bi bi-capsule icon-block me-2"></i>
+                    <span class="menu-name">Medical Records</span>
+                </a>
+            </li>
+            <!--======-->
             <li class="nav-item d-flex align-items-center" (click)="sidebarClick(10)">
                 <a class="nav-link me-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24"
-                         height="24"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         class="feather feather-pie-chart menu-icon">
-                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-                    </svg>
-                    <span class="menu-name">Statistics</span>
+                    <i class="bi bi-hospital me-2"></i>
+                    <span class="menu-name">Stay In</span>
 
                 </a>
                 <i [ngClass]="sideBar==10? 'bi-chevron-down-click':''" class="bi bi-chevron-down me-1"></i>
 
             </li>
-            <li class="nav-item sub-menu p-0" [ngClass]="sideBar==10? 'sub-menu-open':''">
+            <li class="nav-item sub-menu p-0" [ngClass]="sideBar==10? 'sub-menu-open-one':''">
                 <a class="nav-link ps-4 pb-1 pt-1">
                     <i class="bi bi-dot me-2"></i>
-                    <span class="menu-name sub-menu-item">My Publication</span>
+                    <span class="menu-name sub-menu-item">Ckeck In Room</span>
+                </a>
+                <a class="nav-link ps-4 pb-1 pt-1">
+                    <i class="bi bi-dot me-2"></i>
+                    <span class="menu-name sub-menu-item">Check Out Room</span>
                 </a>
                 <a class="nav-link ps-4 pb-1 pt-1">
                     <i class="bi bi-dot me-2"></i>
                     <span class="menu-name sub-menu-item">My Publication</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link">
-                    <svg xmlns="http://www.w3.org/2000/svg"
-                         width="24"
-                         height="24"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2"
-                         stroke-linecap="round"
-                         stroke-linejoin="round"
-                         class="feather feather-file-text menu-icon">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                    <span class="menu-name">My Publication</span>
-                </a>
-            </li>
-
+            <!--======-->
 
             <li class="nav-item">
                 <a href="clinic-pages.html" class="nav-link">
@@ -143,7 +132,7 @@
                     <span class="badge text-bg-primary mx-2">40+</span>
                 </a>
             </li>
-
+            <!--======-->
             <li class="nav-item">
                 <a class="nav-link" href="components.html">
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -170,6 +159,7 @@
                     <span class="menu-name">Components</span>
                 </a>
             </li>
+            <!--======-->
         </ul>
        
     </div>
