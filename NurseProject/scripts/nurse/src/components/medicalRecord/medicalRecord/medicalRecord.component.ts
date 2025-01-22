@@ -3,11 +3,11 @@ import { Router } from "@angular/router";
 import { CheckHealthVM } from "../formMedical/checkHealthVM";
 
 export @Component({
-    selector: 'checkhealth-component',
-    templateUrl: '../../../templates/nurse/checkHealth/checkHealth/index.html',
-    styleUrl: '../../../templates/nurse/checkHealth/checkHealth/styles.less'
+    selector: 'medical-component',
+    templateUrl: '../../../templates/nurse/medicalRecord/medicalRecord/index.html',
+    styleUrl: '../../../templates/nurse/medicalRecord/medicalRecord/styles.less'
 })
-class CheckHealthComponent implements OnInit {
+class MedicalRecordComponent implements OnInit {
     private router: Router = inject(Router);
     isFilter = false;
     isAdd = false;
@@ -17,7 +17,6 @@ class CheckHealthComponent implements OnInit {
     }
 
     checkHealth: Array<CheckHealthVM> = new Array<CheckHealthVM>()
-
 
     onSave(data: CheckHealthVM) {
         if (data.isValid()) {

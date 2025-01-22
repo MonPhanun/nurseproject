@@ -6,12 +6,12 @@ import { Router } from "@angular/router";
 
 
 @Component({
-    selector: "healthform-component",
-    templateUrl: '../../../templates/nurse/checkHealth/formcheckHealth/index.html',
-    styleUrl: '../../../templates/nurse/checkHealth/formcheckHealth/styles.less'
+    selector: "medicalform-component",
+    templateUrl: '../../../templates/nurse/medicalRecord/formMedical/index.html',
+    styleUrl: '../../../templates/nurse/medicalRecord/formMedical/styles.less'
 })
 
-export class FormCheckHealthComponent implements OnInit {
+export class MedicalFormComponent implements OnInit {
 
     private validator: ValidationService = inject(ValidationService);
     private router: Router = inject(Router);

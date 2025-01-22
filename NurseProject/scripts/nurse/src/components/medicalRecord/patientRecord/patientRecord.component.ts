@@ -1,13 +1,12 @@
 ﻿import { Component, EventEmitter, OnInit, Output, inject } from "@angular/core";
 import { Router } from "@angular/router";
-import { DressingProviderService } from "../../../services/dressingProvider.service";
 
  @Component({
     selector: 'selectpatient-component',
-    templateUrl: '../../../templates/nurse/checkHealth/selectPatient/index.html',
-    styleUrl: '../../../templates/nurse/checkHealth/selectPatient/styles.less',
+     templateUrl: '../../../templates/nurse/medicalRecord/patientRecord/index.html',
+     styleUrl: '../../../templates/nurse/medicalRecord/patientRecord/styles.less',
 })
-export class SelectPatientComponent implements OnInit {
+export class PatientRecordComponent implements OnInit {
 
     private router: Router = inject(Router);
     constructor() { }

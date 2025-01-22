@@ -22,7 +22,9 @@ import { resultDetailComponent } from "../components/bloodResult/resultDetail/re
 import { BuildingComponent } from "../components/patientRoom/building/building.component";
 import { BuildingTyleComponent } from "../components/patientRoom/buildingType/buildingType.component";
 import { RoomRegisterComponent } from "../components/patientRoom/roomRegister/roomRegister.component";
-
+import { MedicalRecordComponent } from "../components/medicalRecord/medicalRecord/medicalRecord.component";
+import { MedicalFormComponent } from "../components/medicalRecord/formMedical/formMedical.component";
+import { PatientRecordComponent } from "../components/medicalRecord/patientRecord/patientRecord.component";
 
 
 @NgModule({
@@ -42,7 +44,10 @@ import { RoomRegisterComponent } from "../components/patientRoom/roomRegister/ro
         resultDetailComponent,
         BuildingComponent,
         BuildingTyleComponent,
-        RoomRegisterComponent
+        RoomRegisterComponent,
+        MedicalRecordComponent,
+        MedicalFormComponent,
+        PatientRecordComponent
     ],
     imports: [
         BrowserModule,

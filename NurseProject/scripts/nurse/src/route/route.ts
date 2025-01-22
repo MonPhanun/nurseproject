@@ -6,6 +6,8 @@ import { CheckHealthComponent } from '../components/checkHealth/checkHealth/chec
 import { BloodResultComponent } from '../components/bloodResult/bloodResult/bloodResult.component';
 import { BuildingComponent } from '../components/patientRoom/building/building.component';
 import { BuildingTyleComponent } from '../components/patientRoom/buildingType/buildingType.component';
+import { MedicalRecordComponent } from '../components/medicalRecord/medicalRecord/medicalRecord.component';
+import { PatientRecordComponent } from '../components/medicalRecord/patientRecord/patientRecord.component';
 
 
 const adminRoute: Routes = [
@@ -33,6 +35,14 @@ const adminRoute: Routes = [
             {
                 path: 'buildingType',
                 component: BuildingTyleComponent
+            }, 
+            {
+                path: 'medical',
+                component: MedicalRecordComponent
+            }, 
+            {
+                path: 'patientrecord',
+                component: PatientRecordComponent
             }, 
         ]
     },
